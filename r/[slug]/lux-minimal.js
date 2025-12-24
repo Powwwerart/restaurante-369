@@ -10,6 +10,7 @@ const tabContainer = document.getElementById("category-tabs");
 const gallery = document.getElementById("menu-gallery");
 const nameEl = document.getElementById("restaurant-name");
 const taglineEl = document.getElementById("restaurant-tagline");
+const heroImage = document.getElementById("hero-image");
 const modal = document.getElementById("image-modal");
 const modalImage = modal.querySelector(".modal-image");
 const modalClose = modal.querySelector(".modal-close");
@@ -112,6 +113,9 @@ const initialize = async () => {
     });
 
     renderGallery(data.menu.images);
+    if (data.menu.images && data.menu.images.length > 0) {
+      heroImage.src = data.menu.images[0];
+    }
   } catch (error) {
     nameEl.textContent = "Pizzería ORIÓN";
     taglineEl.textContent = "Horno de piedra • Masa madre • Ingredientes reales";

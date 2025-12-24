@@ -26,18 +26,25 @@ body {
 }
 
 .page {
-  padding-bottom: 110px;
+  padding-bottom: 140px;
 }
 
 .hero {
-  padding: 64px 24px 48px;
+  padding: 72px 24px 64px;
   background: radial-gradient(circle at top, #2a2a2a, #111111 70%);
 }
 
-.hero-content {
-  max-width: 640px;
+.hero-shell {
+  display: grid;
+  gap: 32px;
+  max-width: 1040px;
   margin: 0 auto;
-  text-align: left;
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-label {
@@ -65,6 +72,49 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+.hero-media {
+  display: grid;
+  gap: 16px;
+}
+
+.hero-image-card {
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--bg-soft);
+}
+
+.hero-image-card img {
+  width: 100%;
+  height: clamp(240px, 45vw, 320px);
+  object-fit: cover;
+  display: block;
+}
+
+.hero-badges {
+  display: grid;
+  gap: 12px;
+}
+
+.hero-badge {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-badge-title {
+  display: block;
+  font-weight: 600;
+  color: var(--accent-strong);
+  margin-bottom: 2px;
+}
+
+.hero-badge-text {
+  color: var(--muted);
+  font-size: 0.92rem;
 }
 
 .section {
@@ -202,18 +252,38 @@ body {
   box-shadow: var(--shadow);
 }
 
-.sticky-cta {
+.whatsapp-fab {
   position: fixed;
-  bottom: 16px;
-  left: 16px;
-  right: 16px;
-  display: grid;
-  gap: 12px;
-  z-index: 20;
+  right: 18px;
+  bottom: 18px;
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: #25d366;
+  color: #0c1a10;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.sticky-cta .btn {
-  width: 100%;
+.whatsapp-fab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  font-size: 1.1rem;
 }
 
 .modal {
@@ -253,7 +323,12 @@ body {
 
 @media (min-width: 720px) {
   .hero {
-    padding: 88px 48px 64px;
+    padding: 96px 48px 72px;
+  }
+
+  .hero-shell {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
   }
 
   .section {
@@ -266,13 +341,5 @@ body {
 
   .gallery-card img {
     height: 200px;
-  }
-
-  .sticky-cta {
-    max-width: 520px;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    grid-template-columns: repeat(2, 1fr);
   }
 }
