@@ -11,11 +11,18 @@ const gallery = document.getElementById("menu-gallery");
 const nameEl = document.getElementById("restaurant-name");
 const taglineEl = document.getElementById("restaurant-tagline");
 const heroImage = document.getElementById("hero-image");
+const heroImageCard = heroImage?.closest(".hero-image-card") ?? null;
 const modal = document.getElementById("image-modal");
 const modalImage = modal.querySelector(".modal-image");
 const modalClose = modal.querySelector(".modal-close");
 
 const formatPrice = (price) => `$${price.toFixed(2)}`;
+
+const hideHeroImage = () => {
+  if (heroImageCard) {
+    heroImageCard.style.display = "none";
+  }
+};
 
 const renderMenuItems = (items) => {
   menuList.innerHTML = "";
@@ -63,6 +70,11 @@ const closeModal = () => {
 
 const renderGallery = (images) => {
   gallery.innerHTML = "";
+  if (!images || images.length === 0) {
+    gallery.textContent = "Menú en proceso";
+    return;
+  }
+
   images.forEach((src) => {
     const card = document.createElement("button");
     card.type = "button";
@@ -113,13 +125,17 @@ const initialize = async () => {
     });
 
     renderGallery(data.menu.images);
-    if (data.menu.images && data.menu.images.length > 0) {
+    if (heroImage && data.menu.images && data.menu.images.length > 0) {
+      heroImage.addEventListener("error", hideHeroImage);
       heroImage.src = data.menu.images[0];
+    } else {
+      hideHeroImage();
     }
   } catch (error) {
     nameEl.textContent = "Pizzería ORIÓN";
     taglineEl.textContent = "Horno de piedra • Masa madre • Ingredientes reales";
     menuList.innerHTML = `<div class="menu-card">${error.message}</div>`;
+    hideHeroImage();
   }
 };
 
