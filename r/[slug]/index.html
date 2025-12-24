@@ -15,13 +15,34 @@
   <body>
     <div class="page">
       <header class="hero" id="hero">
-        <div class="hero-content">
-          <p class="hero-label">Pizzería de autor</p>
-          <h1 class="hero-title" id="restaurant-name"></h1>
-          <p class="hero-tagline" id="restaurant-tagline"></p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#menu">Ver menú</a>
-            <a class="btn btn-secondary" href="#galeria">Ver fotos</a>
+        <div class="hero-shell">
+          <div class="hero-content">
+            <p class="hero-label">Pizzería de autor</p>
+            <h1 class="hero-title" id="restaurant-name"></h1>
+            <p class="hero-tagline" id="restaurant-tagline"></p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#menu">Ver menú</a>
+              <a class="btn btn-secondary" href="#ver-menu">Ver fotos</a>
+            </div>
+          </div>
+          <div class="hero-media">
+            <div class="hero-image-card">
+              <img id="hero-image" alt="Pizza artesanal recién horneada" />
+            </div>
+            <div class="hero-badges">
+              <div class="hero-badge">
+                <span class="hero-badge-title">Horno de piedra</span>
+                <span class="hero-badge-text">Cocción lenta & precisa</span>
+              </div>
+              <div class="hero-badge">
+                <span class="hero-badge-title">Masa madre</span>
+                <span class="hero-badge-text">Fermentación 48 h</span>
+              </div>
+              <div class="hero-badge">
+                <span class="hero-badge-title">Ingredientes reales</span>
+                <span class="hero-badge-text">Proveedores locales</span>
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -36,10 +57,10 @@
           <div class="menu-list" id="menu-list"></div>
         </section>
 
-        <section class="section" id="galeria">
+        <section class="section" id="ver-menu">
           <div class="section-header">
-            <h2>Ver menú en fotos</h2>
-            <p>Explora nuestras pizzas y especialidades al horno de piedra.</p>
+            <h2>Ver menú</h2>
+            <p>Haz zoom en cada lámina para leer el menú completo.</p>
           </div>
           <div class="gallery" id="menu-gallery"></div>
         </section>
@@ -51,14 +72,16 @@
       <img class="modal-image" alt="Foto del menú" />
     </div>
 
-    <div class="sticky-cta">
-      <a class="btn btn-primary" href="https://wa.me/15551234567" target="_blank" rel="noreferrer">
-        Ordenar por WhatsApp
-      </a>
-      <a class="btn btn-secondary" href="https://maps.google.com/?q=Pizzeria%20ORION" target="_blank" rel="noreferrer">
-        Ubicación
-      </a>
-    </div>
+    <a
+      class="whatsapp-fab"
+      href="https://wa.me/15551234567"
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Ordenar por WhatsApp"
+    >
+      <span class="whatsapp-icon" aria-hidden="true">✆</span>
+      WhatsApp
+    </a>
 
     <script type="module" src="./lux-minimal.js"></script>
   </body>
