@@ -1,0 +1,105 @@
+{
+  "slug": "pizzeria-orion",
+  "name": "Pizzería ORIÓN",
+  "tagline": "Horno de piedra • Masa madre • Ingredientes reales",
+  "theme": "lux-minimal",
+  "menu": {
+    "images": [
+      "/menu-images/pizzeria-orion/01.jpg",
+      "/menu-images/pizzeria-orion/02.jpg",
+      "/menu-images/pizzeria-orion/03.jpg"
+    ],
+    "items": [
+      {
+        "category": "Pizzas",
+        "items": [
+          {
+            "name": "Margherita Clásica",
+            "description": "Tomate San Marzano, fior di latte, albahaca fresca.",
+            "price": 16
+          },
+          {
+            "name": "Pepperoni Orion",
+            "description": "Pepperoni artesanal, miel picante, mozzarella.",
+            "price": 18
+          },
+          {
+            "name": "Trufa Blanca",
+            "description": "Crema de ricotta, champiñón, aceite de trufa.",
+            "price": 21
+          },
+          {
+            "name": "Prosciutto & Rúcula",
+            "description": "Jamón curado, rúcula baby, parmesano.",
+            "price": 22
+          },
+          {
+            "name": "Vegetal del Huerto",
+            "description": "Calabacín, pimiento asado, cebolla morada.",
+            "price": 19
+          }
+        ]
+      },
+      {
+        "category": "Entradas",
+        "items": [
+          {
+            "name": "Bruschettas de Tomate",
+            "description": "Pan de masa madre, tomate, aceite de oliva.",
+            "price": 9
+          },
+          {
+            "name": "Burrata al Horno",
+            "description": "Burrata cremosa, pesto de pistacho.",
+            "price": 13
+          },
+          {
+            "name": "Arancini de Quesos",
+            "description": "Bolitas de risotto con mozzarella fundida.",
+            "price": 11
+          }
+        ]
+      },
+      {
+        "category": "Bebidas",
+        "items": [
+          {
+            "name": "Limonada de la Casa",
+            "description": "Limón, hierbabuena, toque de miel.",
+            "price": 6
+          },
+          {
+            "name": "Spritz Cítrico",
+            "description": "Aperitivo italiano, naranja, burbujas.",
+            "price": 12
+          },
+          {
+            "name": "Agua Mineral",
+            "description": "Con o sin gas.",
+            "price": 4
+          }
+        ]
+      },
+      {
+        "category": "Postres",
+        "items": [
+          {
+            "name": "Tiramisú ORIÓN",
+            "description": "Mascarpone, cacao oscuro, café espresso.",
+            "price": 9
+          },
+          {
+            "name": "Panna Cotta Vainilla",
+            "description": "Con coulis de frutos rojos.",
+            "price": 8
+          },
+          {
+            "name": "Gelato Artesanal",
+            "description": "Vainilla bourbon o chocolate 70%.",
+            "price": 7
+          }
+        ]
+      }
+    ]
+  }
+}

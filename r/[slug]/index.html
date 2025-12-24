@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzería ORIÓN</title>
+    <link rel="stylesheet" href="./lux-minimal.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero" id="hero">
+        <div class="hero-content">
+          <p class="hero-label">Pizzería de autor</p>
+          <h1 class="hero-title" id="restaurant-name"></h1>
+          <p class="hero-tagline" id="restaurant-tagline"></p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#menu">Ver menú</a>
+            <a class="btn btn-secondary" href="#galeria">Ver fotos</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="section" id="menu">
+          <div class="section-header">
+            <h2>Menú digital</h2>
+            <p>Sabores auténticos con ingredientes reales y masa madre.</p>
+          </div>
+          <div class="tabs" id="category-tabs"></div>
+          <div class="menu-list" id="menu-list"></div>
+        </section>
+
+        <section class="section" id="galeria">
+          <div class="section-header">
+            <h2>Ver menú en fotos</h2>
+            <p>Explora nuestras pizzas y especialidades al horno de piedra.</p>
+          </div>
+          <div class="gallery" id="menu-gallery"></div>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal" id="image-modal" aria-hidden="true">
+      <button class="modal-close" type="button" aria-label="Cerrar">✕</button>
+      <img class="modal-image" alt="Foto del menú" />
+    </div>
+
+    <div class="sticky-cta">
+      <a class="btn btn-primary" href="https://wa.me/15551234567" target="_blank" rel="noreferrer">
+        Ordenar por WhatsApp
+      </a>
+      <a class="btn btn-secondary" href="https://maps.google.com/?q=Pizzeria%20ORION" target="_blank" rel="noreferrer">
+        Ubicación
+      </a>
+    </div>
+
+    <script type="module" src="./lux-minimal.js"></script>
+  </body>
+</html>
